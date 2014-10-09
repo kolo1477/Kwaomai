@@ -57,7 +57,7 @@ namespace hi_im_gosu
 
             //menu.AddSubMenu(new Menu("Combo", "combo"));
             //menu.SubMenu("combo").AddItem(new MenuItem("laugh", "Cancel w/ Laugh")).SetValue(false);
-        {
+        
 			menu.AddItem(
                 new MenuItem("UseET" + Id, "Use E (Toggle)").SetValue(
                     new KeyBind("T".ToCharArray()[0], KeyBindType.Toggle)));
