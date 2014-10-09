@@ -204,7 +204,7 @@ namespace hi_im_gosu
                 E.Cast(hero);
             }
         
-        {
+        
             
         
 	
