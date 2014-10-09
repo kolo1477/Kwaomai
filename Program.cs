@@ -197,15 +197,12 @@ namespace hi_im_gosu
                         prediction.UnitPosition.To2D()
                             .Extend(ObjectManager.Player.ServerPosition.To2D(),
                                 -(menu.Item("PushDistance").GetValue<Slider>().Value/2))
-                            .To3D())
-                        .HasFlag(CollisionFlags.Wall)
-                select hero)
-            {
-                E.Cast(hero);
-            }
-        
-        
-            
-        
-	
-
+                                .To3D())
+                             .HasFlag(CollisionFlags.Wall)
+                 select hero)
+               {
+                  E.Cast(hero);
+               }
+       }
+}
+}
