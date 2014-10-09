@@ -61,13 +61,6 @@ namespace hi_im_gosu
 			menu.AddItem(
                 new MenuItem("UseET" + Id, "Use E (Toggle)").SetValue(
                     new KeyBind("T".ToCharArray()[0], KeyBindType.Toggle)));
-            menu.AddItem(new MenuItem("UseEInterrupt" + Id, "Use E To Interrupt").SetValue(true));
-            menu.AddItem(
-                new MenuItem("PushDistance" + Id, "E Push Distance").SetValue(new Slider(425, 475, 300)));
-	
-			menu.AddItem(
-                new MenuItem("UseET", "Use E (Toggle)").SetValue(
-                    new KeyBind("T".ToCharArray()[0], KeyBindType.Toggle)));
             menu.AddItem(new MenuItem("UseEInterrupt", "Use E To Interrupt").SetValue(true));
             menu.AddItem(
                 new MenuItem("PushDistance", "E Push Distance").SetValue(new Slider(425, 475, 300)));
