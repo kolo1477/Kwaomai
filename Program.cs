@@ -58,14 +58,16 @@ namespace hi_im_gosu
             //menu.AddSubMenu(new Menu("Combo", "combo"));
             //menu.SubMenu("combo").AddItem(new MenuItem("laugh", "Cancel w/ Laugh")).SetValue(false);
         
+			menu.AddItem(new MenuItem("UseQC" + Id, "Use Q").SetValue(true));
+            menu.AddItem(new MenuItem("UseEC" + Id, "Use E").SetValue(true));
 			menu.AddItem(
                 new MenuItem("UseET" + Id, "Use E (Toggle)").SetValue(
                     new KeyBind("T".ToCharArray()[0], KeyBindType.Toggle)));
             menu.AddItem(new MenuItem("UseEInterrupt", "Use E To Interrupt").SetValue(true));
             menu.AddItem(
                 new MenuItem("PushDistance", "E Push Distance").SetValue(new Slider(425, 475, 300)));
-            menu.AddItem(new MenuItem("UseQC", "Use Q").SetValue(true));
-            menu.AddItem(new MenuItem("UseEC", "Use E").SetValue(true));
+            menu.AddItem(new MenuItem("UseEC" + Id, "Use E").SetValue(true));
+            menu.AddItem(new MenuItem("UseEC" + Id, "Use E").SetValue(true));
             menu.AddItem(
                 new MenuItem("UseEaa", "Use E after auto").SetValue(new KeyBind("G".ToCharArray()[0], KeyBindType.Toggle)));
             menu.AddSubMenu(new Menu("Gapcloser List", "gap"));
@@ -183,8 +185,8 @@ namespace hi_im_gosu
         public static void Game_OnGameUpdate(EventArgs args)
         {
             if ((!E.IsReady()) ||
-                ((orbwalker.ActiveMode.ToString() != "Combo" || !menu.Item("UseEC").GetValue<bool>()) &&
-                 !menu.Item("UseET").GetValue<KeyBind>().Active)) return;
+                ((orbwalker.ActiveMode.ToString() != "Combo" || !menu.Item("UseEC" + Id").GetValue<bool>()) &&
+                 !menu.Item("UseET" + Id").GetValue<KeyBind>().Active)) return;
 
             foreach (var hero in from hero in ObjectManager.Get<Obj_AI_Hero>().Where(hero => hero.IsValidTarget(550f))
                 let prediction = E.GetPrediction(hero)
@@ -205,4 +207,4 @@ namespace hi_im_gosu
                }
        }
 }
-}
+{
