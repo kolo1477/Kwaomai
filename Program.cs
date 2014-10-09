@@ -55,8 +55,8 @@ namespace hi_im_gosu
             SimpleTs.AddToMenu(TargetSelectorMenu);
             menu.AddSubMenu(TargetSelectorMenu);
             //dsfdsfdfs
-            menu.AddItem(new MenuItem("UseQC" + Id, "Use Q").SetValue(true));
-            menu.AddItem(new MenuItem("UseEC" + Id, "Use E").SetValue(true));
+            menu.AddItem(new MenuItem("UseQC", "Use Q").SetValue(true));
+            menu.AddItem(new MenuItem("UseEC", "Use E").SetValue(true));
             return true;
             //menu.AddSubMenu(new Menu("Combo", "combo"));
             //menu.SubMenu("combo").AddItem(new MenuItem("laugh", "Cancel w/ Laugh")).SetValue(false);
@@ -68,8 +68,8 @@ namespace hi_im_gosu
             menu.AddItem(new MenuItem("UseEInterrupt", "Use E To Interrupt").SetValue(true));
             menu.AddItem(
                 new MenuItem("PushDistance", "E Push Distance").SetValue(new Slider(425, 475, 300)));
-            menu.AddItem(new MenuItem("UseEC" + Id, "Use E").SetValue(true));
-            menu.AddItem(new MenuItem("UseEC" + Id, "Use E").SetValue(true));
+            menu.AddItem(new MenuItem("UseEC", "Use E").SetValue(true));
+            menu.AddItem(new MenuItem("UseEC", "Use E").SetValue(true));
             menu.AddItem(
                 new MenuItem("UseEaa", "Use E after auto").SetValue(new KeyBind("G".ToCharArray()[0], KeyBindType.Toggle)));
             menu.AddSubMenu(new Menu("Gapcloser List", "gap"));
@@ -154,8 +154,8 @@ namespace hi_im_gosu
                     menu.Item("UseEaa").SetValue<KeyBind>(new KeyBind("G".ToCharArray()[0], KeyBindType.Toggle));
                 }
 
-                menu.AddItem(new MenuItem("UseQC" + Id, "Use Q").SetValue(true));
-                menu.AddItem(new MenuItem("UseEC" + Id, "Use E").SetValue(true));
+                menu.AddItem(new MenuItem("UseQC", "Use Q").SetValue(true));
+                menu.AddItem(new MenuItem("UseEC", "Use E").SetValue(true));
                 {
                     var after = ObjectManager.Player.Position +
                                 Normalize(Game.CursorPos - ObjectManager.Player.Position)*300;
