@@ -202,9 +202,9 @@ namespace hi_im_gosu
                                 .To3D())
                              .HasFlag(CollisionFlags.Wall)
                  select hero)
-               {
+               
                   E.Cast(hero);
-               }
+               
 
 
 
