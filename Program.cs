@@ -41,7 +41,7 @@ namespace hi_im_gosu
 
         }
            
-            public override bool ComboMenu(Menu config)
+             public static void ComboMenu(Menu config)
         {
             menu.AddItem(new MenuItem("UseQC" + Id, "Use Q").SetValue(true));
             menu.AddItem(new MenuItem("UseEC" + Id, "Use E").SetValue(true));
