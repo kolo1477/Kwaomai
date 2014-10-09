@@ -60,6 +60,7 @@ namespace hi_im_gosu
         
 			menu.AddItem(new MenuItem("UseQC" + Id, "Use Q").SetValue(true));
             menu.AddItem(new MenuItem("UseEC" + Id, "Use E").SetValue(true));
+            
 			menu.AddItem(
                 new MenuItem("UseET" + Id, "Use E (Toggle)").SetValue(
                     new KeyBind("T".ToCharArray()[0], KeyBindType.Toggle)));
@@ -199,12 +200,12 @@ namespace hi_im_gosu
                         prediction.UnitPosition.To2D()
                             .Extend(ObjectManager.Player.ServerPosition.To2D(),
                                 -(menu.Item("PushDistance").GetValue<Slider>().Value/2))
-                                .To3D())
-                             .HasFlag(CollisionFlags.Wall)
-                 select hero)
-               
-                  E.Cast(hero);
-               
-
-
-
+                            .To3D())
+                        .HasFlag(CollisionFlags.Wall)
+                select hero)
+            {
+                E.Cast(hero);
+            }
+        }
+    }
+}
