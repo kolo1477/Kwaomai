@@ -185,8 +185,8 @@ namespace hi_im_gosu
         public static void Game_OnGameUpdate(EventArgs args)
         {
             if ((!E.IsReady()) ||
-                ((orbwalker.ActiveMode.ToString() != "Combo" || !menu.Item("UseEC" + Id").GetValue<bool>()) &&
-                 !menu.Item("UseET" + Id").GetValue<KeyBind>().Active)) return;
+                ((orbwalker.ActiveMode.ToString() != "Combo" || !menu.Item("UseEC").GetValue<bool>()) &&
+                 !menu.Item("UseET").GetValue<KeyBind>().Active)) return;
 
             foreach (var hero in from hero in ObjectManager.Get<Obj_AI_Hero>().Where(hero => hero.IsValidTarget(550f))
                 let prediction = E.GetPrediction(hero)
@@ -206,5 +206,6 @@ namespace hi_im_gosu
                   E.Cast(hero);
                }
        }
+
+
 }
-{
