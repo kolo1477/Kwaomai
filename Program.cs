@@ -203,8 +203,7 @@ namespace hi_im_gosu
             {
                 E.Cast(hero);
             }
-        }
-            public override bool MiscMenu(Menu config)
+        
         {
             
         }
