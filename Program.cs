@@ -40,7 +40,13 @@ namespace hi_im_gosu
             }
 
         }
-
+           
+            public override bool ComboMenu(Menu config)
+        {
+            menu.AddItem(new MenuItem("UseQC" + Id, "Use Q").SetValue(true));
+            menu.AddItem(new MenuItem("UseEC" + Id, "Use E").SetValue(true));
+            return true;
+        } 
         public static void Game_OnGameLoad(EventArgs args)
         {
             //Utils.PrintMessage("Vayne loaded");
@@ -57,10 +63,8 @@ namespace hi_im_gosu
 
             //menu.AddSubMenu(new Menu("Combo", "combo"));
             //menu.SubMenu("combo").AddItem(new MenuItem("laugh", "Cancel w/ Laugh")).SetValue(false);
-        
-			menu.AddItem(new MenuItem("UseQC" + Id, "Use Q").SetValue(true));
-            menu.AddItem(new MenuItem("UseEC" + Id, "Use E").SetValue(true));
-            
+
+          
 			menu.AddItem(
                 new MenuItem("UseET" + Id, "Use E (Toggle)").SetValue(
                     new KeyBind("T".ToCharArray()[0], KeyBindType.Toggle)));
@@ -154,8 +158,8 @@ namespace hi_im_gosu
                 }
 
                 menu.AddItem(new MenuItem("UseQC" + Id, "Use Q").SetValue(true));
-                menu.AddItem(new MenuItem("UseEC" + Id, "Use E").SetValue(true))
-                    Q.IsReady())
+                menu.AddItem(new MenuItem("UseEC" + Id, "Use E").SetValue(true));
+                    Q.IsReady());
                 {
                     var after = ObjectManager.Player.Position +
                                 Normalize(Game.CursorPos - ObjectManager.Player.Position)*300;
