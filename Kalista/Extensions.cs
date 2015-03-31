@@ -4,7 +4,7 @@ using System.Linq;
 using LeagueSharp;
 using LeagueSharp.Common;
 
-namespace Kalista
+namespace VsKalista
 {
     public static class Extensions
     {
@@ -57,7 +57,7 @@ namespace Kalista
         {
             List<TSource> uniqueList = new List<TSource>();
 
-            foreach(var entry in list)
+            foreach (var entry in list)
             {
                 if (uniqueList.All(e => e.NetworkId != entry.NetworkId))
                     uniqueList.Add(entry);
