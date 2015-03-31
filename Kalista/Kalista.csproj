@@ -2,57 +2,49 @@
 <Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Release</Configuration>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{F5E6847F-2A4B-4DE3-982B-F014739A4EA6}</ProjectGuid>
+    <ProjectGuid>{0E389B00-F1B4-4D13-9D50-2C4E034184DE}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Kalista</RootNamespace>
-    <AssemblyName>Kalista</AssemblyName>
+    <RootNamespace>ConsoleApplication1</RootNamespace>
+    <AssemblyName>ConsoleApplication1</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <PreBuildEvent />
-    <PostBuildEvent />
-    <OutputPath>bin\Release</OutputPath>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>x86</PlatformTarget>
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>bin\Release</OutputPath>
+    <OutputPath>bin\Debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>x86</PlatformTarget>
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>bin\Release</OutputPath>
+    <OutputPath>bin\Release\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="LeagueSharp">
-      <HintPath>C:\Users\Hellsing\OneDrive\Development\LeagueSharp\\System\LeagueSharp.dll</HintPath>
-    </Reference>
     <Reference Include="LeagueSharp.Common">
-      <HintPath>C:\Users\Hellsing\OneDrive\Development\LeagueSharp\\System\LeagueSharp.Common.dll</HintPath>
+      <HintPath>..\..\..\..\..\Desktop\LeagueSharp\System\LeagueSharp.Common.dll</HintPath>
     </Reference>
     <Reference Include="LeagueSharp.CommonEx">
-      <HintPath>..\LeagueSharp\System\LeagueSharp.CommonEx.dll</HintPath>
+      <HintPath>..\..\..\..\..\Desktop\LeagueSharp\System\LeagueSharp.CommonEx.dll</HintPath>
     </Reference>
     <Reference Include="SharpDX">
-      <HintPath>C:\Users\Hellsing\OneDrive\Development\LeagueSharp\\System\SharpDX.dll</HintPath>
-    </Reference>
-    <Reference Include="SharpDX.Direct3D9">
-      <HintPath>C:\Users\Hellsing\OneDrive\Development\LeagueSharp\\System\SharpDX.Direct3D9.dll</HintPath>
+      <HintPath>..\..\..\..\..\Desktop\LeagueSharp\System\SharpDX.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -71,7 +63,6 @@
     <Compile Include="SoulBoundSaver.cs" />
     <Compile Include="SpellManager.cs" />
     <Compile Include="SpellQueue.cs" />
-    <Compile Include="UpdateChecker.cs" />
     <Compile Include="VectorHelper.cs" />
   </ItemGroup>
   <ItemGroup>
