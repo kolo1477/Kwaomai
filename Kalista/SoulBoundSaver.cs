@@ -5,7 +5,7 @@ using System.Linq;
 using LeagueSharp;
 using LeagueSharp.Common;
 
-namespace Kalista
+namespace VsKalista
 {
     public class SoulBoundSaver
     {
