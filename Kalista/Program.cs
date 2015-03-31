@@ -5,7 +5,7 @@ using LeagueSharp.Common;
 
 using Color = System.Drawing.Color;
 
-namespace Kalista
+namespace VsKalista
 {
     public class Program
     {
