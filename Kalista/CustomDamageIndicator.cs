@@ -8,7 +8,7 @@ using SharpDX;
 
 using Color = System.Drawing.Color;
 
-namespace Kalista
+namespace VsKalista
 {
     // Kinda credits to detuks (http://www.joduska.me/forum/user/107-/)
     // Removed unneeded stuff and improved the code to my needs
