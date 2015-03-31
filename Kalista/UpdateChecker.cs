@@ -6,7 +6,7 @@ using System.Threading;
 using LeagueSharp;
 using LeagueSharp.Common;
 
-namespace Kalista
+namespace VsKalista
 {
     public class UpdateChecker
     {
