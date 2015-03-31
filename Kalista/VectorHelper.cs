@@ -1,5 +1,7 @@
 using System;
 using System.Collections.Generic;
+using System;
+using System.Collections.Generic;
 using System.Linq;
 
 using LeagueSharp;
@@ -7,7 +9,7 @@ using LeagueSharp.Common;
 
 using SharpDX;
 
-namespace Kalista
+namespace VsKalista
 {
     public class VectorHelper
     {
@@ -34,8 +36,8 @@ namespace Kalista
             // We'll use dotProd() to 
             // determine angle between apexToXVect and axis.
             bool isInInfiniteCone = DotProd(apexToXVect, axisVect) / Magn(apexToXVect) / Magn(axisVect) >
-            // We can safely compare cos() of angles 
-            // between vectors instead of bare angles.
+                // We can safely compare cos() of angles 
+                // between vectors instead of bare angles.
             Math.Cos(halfAperture);
 
             if (!isInInfiniteCone)
