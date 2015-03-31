@@ -4,7 +4,7 @@ using LeagueSharp.Common.Data;
 
 using Item = LeagueSharp.Common.Items.Item;
 
-namespace Kalista
+namespace VsKalista
 {
     public class ItemManager
     {
